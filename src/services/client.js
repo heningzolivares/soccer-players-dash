@@ -1,8 +1,8 @@
 const fetchOptions = {
-  method: 'GET',
+  method: "GET",
   headers: {
-    'X-RapidAPI-Host': process.env.REACT_APP_API_HOST,
-    'X-RapidAPI-Key': process.env.REACT_APP_API_SECRET,
+    "X-RapidAPI-Host": process.env.REACT_APP_API_HOST,
+    "X-RapidAPI-Key": process.env.REACT_APP_API_SECRET,
   },
 };
 

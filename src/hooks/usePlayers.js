@@ -1,5 +1,5 @@
-import { useInfiniteQuery } from 'react-query';
-import client from '../services/client';
+import { useInfiniteQuery } from "react-query";
+import client from "../services/client";
 
 const { apiGet } = client;
 
@@ -8,7 +8,7 @@ async function fetchPlayers({ teamId, pageParam = 1 }) {
 }
 function usePlayers(teamId, enabled) {
   return useInfiniteQuery(
-    ['players', teamId],
+    ["players", teamId],
     ({ pageParam }) => fetchPlayers({ teamId, pageParam }),
     {
       enabled,

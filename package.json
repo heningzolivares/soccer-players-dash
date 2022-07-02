@@ -35,6 +35,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint 'src/**/*.js'",
+    "prettier": "prettier 'src/**/*.js'",
+    "prettier:fix": "prettier --write 'src/**/*.js'",
     "lint-fix": "yarn lint -- --fix"
   },
   "eslintConfig": {
