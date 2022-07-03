@@ -1,9 +1,13 @@
-import { Avatar, Typography } from "@mui/material";
+import Typography from "@mui/material/Typography";
+import Avatar from "@mui/material/Avatar";
 import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet";
+
 import Box from "../components/common/Box";
 import Container from "../components/common/Container";
 import usePlayer from "../hooks/usePlayer";
 import StatisticsTable from "../components/StatisticsTable";
+import PageSettings from "../constants";
 
 function Player() {
   const { playerId, teamId } = useParams();
@@ -25,6 +29,12 @@ function Player() {
     } = data;
     return (
       <Container>
+        <Helmet>
+          <title>
+            {firstname} {lastname} - {PageSettings.title}
+          </title>
+          <link rel="canonical" href="http://mysite.com/example" />
+        </Helmet>
         <Box
           sx={{
             display: "flex",

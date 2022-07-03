@@ -1,4 +1,6 @@
 import * as React from "react";
+import { Outlet } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 import Container from "../components/common/Container";
 import Chip from "../components/common/Chip";
@@ -7,6 +9,7 @@ import Pagination from "../components/Pagination";
 import PlayerCard from "../components/PlayerCard";
 import useTeams from "../hooks/useTeams";
 import usePlayers from "../hooks/usePlayers";
+import PageSettings from "../constants";
 
 function Home() {
   const [currentTeam, setTeam] = React.useState(null);
@@ -27,6 +30,10 @@ function Home() {
 
   return (
     <Container>
+      <Helmet>
+        <title>{PageSettings.title}</title>
+      </Helmet>
+
       <Box
         sx={{
           display: "flex",
@@ -80,6 +87,7 @@ function Home() {
           isFetchingNextPage={isFetchingNextPage}
         />
       )}
+      <Outlet />
     </Container>
   );
 }
