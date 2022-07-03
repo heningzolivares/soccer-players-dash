@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import dayjs from "dayjs";
 import "./index.css";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
@@ -11,6 +12,9 @@ import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
+import "dayjs/locale/es";
+
+dayjs.locale("es");
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

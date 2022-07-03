@@ -28,7 +28,7 @@ function StatisticsTable({ statistics }) {
           {statistics.map((stats) => {
             const { league, team, goals, passes, fouls, shots } = stats;
             return (
-              <TableBody>
+              <TableBody key={`${league.id}${team.id}`}>
                 <TableRow>
                   <TableCell>
                     <Stack direction="row" alignItems="center">

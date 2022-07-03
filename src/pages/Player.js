@@ -1,5 +1,6 @@
 import Typography from "@mui/material/Typography";
 import Avatar from "@mui/material/Avatar";
+import dayjs from "dayjs";
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
@@ -73,7 +74,7 @@ function Player() {
             </Typography>
             <Typography variant="subtitle1">
               Fecha de nacimiento:{` `}
-              {birth.date}
+              {dayjs(birth.date).format("DD MMMM YYYY")}
             </Typography>
           </Box>
         </Box>
