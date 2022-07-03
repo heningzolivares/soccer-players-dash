@@ -1,7 +1,11 @@
 {
   "name": "soccer-players-dash",
+  "author": {
+    "name": "Heningz Olivares",
+    "email": "heningzolivares.dev@gmail.com"
+  },
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
