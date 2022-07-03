@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import Player from "./pages/Player";
 import "./App.css";
+import Footer from "./components/Footer";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -26,7 +27,9 @@ function App() {
           <Route index path="/" element={<Home />} />
           <Route path="/players/:playerId/:teamId" element={<Player />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
+
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );

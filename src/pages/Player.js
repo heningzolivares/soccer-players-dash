@@ -39,11 +39,11 @@ function Player() {
         <Box
           sx={{
             display: "flex",
-            flexDirection: "row",
-            gap: 10,
+            flexDirection: ["column", "row"],
+            gap: [2, 10],
           }}
         >
-          <Box>
+          <Box sx={{ margin: ["auto", 0] }}>
             <Avatar
               alt={firstname}
               src={photo}
@@ -55,27 +55,28 @@ function Player() {
               {firstname} {` `}
               {lastname}
             </Typography>
-
-            <Typography variant="subtitle1">
-              Edad:{` `}
-              {age}
-            </Typography>
-            <Typography variant="subtitle1">
-              Nacionalidad:{` `}
-              {nationality}
-            </Typography>
-            <Typography variant="subtitle1">
-              Altura:{` `}
-              {height}
-            </Typography>
-            <Typography variant="subtitle1">
-              Peso:{` `}
-              {weight}
-            </Typography>
-            <Typography variant="subtitle1">
-              Fecha de nacimiento:{` `}
-              {dayjs(birth.date).format("DD MMMM YYYY")}
-            </Typography>
+            <Box sx={{ textAlign: ["center", "left"] }}>
+              <Typography variant="subtitle1">
+                Edad:{` `}
+                {age}
+              </Typography>
+              <Typography variant="subtitle1">
+                Nacionalidad:{` `}
+                {nationality}
+              </Typography>
+              <Typography variant="subtitle1">
+                Altura:{` `}
+                {height}
+              </Typography>
+              <Typography variant="subtitle1">
+                Peso:{` `}
+                {weight}
+              </Typography>
+              <Typography variant="subtitle1">
+                Fecha de nacimiento:{` `}
+                {dayjs(birth.date).format("DD MMMM YYYY")}
+              </Typography>
+            </Box>
           </Box>
         </Box>
         <StatisticsTable statistics={statistics} />

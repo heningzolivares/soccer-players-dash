@@ -1,3 +1,4 @@
+import Typography from "@mui/material/Typography";
 import * as React from "react";
 import { Outlet } from "react-router-dom";
 import { Helmet } from "react-helmet";
@@ -80,6 +81,15 @@ function Home() {
             </React.Fragment>
           ))}
       </Box>
+
+      {!currentTeam && (
+        <Box sx={{ mt: 10 }}>
+          <Typography variant="h6" textAlign="center">
+            Hola, selecciona un equipo.
+          </Typography>
+        </Box>
+      )}
+
       {currentTeam && !isLoading && (
         <Pagination
           fetchNextPage={fetchNextPage}
